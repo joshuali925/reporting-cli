@@ -29,11 +29,13 @@
     "dompurify": "^2.1.1",
     "dotenv": "^16.0.3",
     "jsdom": "^19.0.0",
+    "jspdf": "^2.5.1",
     "lodash": "^4.17.21",
     "nodemailer": "^6.8.0",
     "nodemailer-express-handlebars": "^5.0.0",
     "ora": "^5.4.1",
-    "puppeteer": "^18.2.0"
+    "puppeteer": "^18.2.0",
+    "tesseract.js": "^4.0.2"
   },
   "bin": {
     "opensearch-reporting-cli": "./src/cli.js"
