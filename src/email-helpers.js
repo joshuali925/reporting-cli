@@ -43,14 +43,14 @@ module.exports = async function sendEmail(filename, url, sender, recipient, tran
 
   let transporter = getTransporter(transport, smtphost, smtpport, smtpsecure, smtpusername, smtppassword, selfsignedcerts);
 
-  transporter.use("compile", hbs({
+  /* transporter.use("compile", hbs({
     viewEngine: {
       partialsDir: path.join(__dirname, './views/'),
       defaultLayout: ""
     },
     viewPath: path.join(__dirname, './views/'),
     extName: ".hbs"
-  }));
+  })); */
 
   // send email
   return new Promise((success, fail) => {
@@ -97,7 +97,7 @@ const getmailOptions = (url, sender, recipient, file, emailSubject, note, emailb
     subject: emailSubject,
     to: recipient,
     attachments: [
-      {
+      /* {
         filename: emailbody,
         path: emailbody,
         cid: 'email_body'
@@ -106,7 +106,7 @@ const getmailOptions = (url, sender, recipient, file, emailSubject, note, emailb
         filename: 'opensearch_logo_darkmode.png',
         path: path.join(__dirname, './views/opensearch_logo_darkmode.png'),
         cid: 'opensearch_logo_darkmode'
-      },
+      }, */
       {
         filename: path.basename(file),
         path: file
