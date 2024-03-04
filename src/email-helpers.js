@@ -111,6 +111,7 @@ const getmailOptions = (url, sender, recipient, file, emailSubject, note, emailb
         filename: path.basename(file),
         path: file
       }],
+    text: 'Please see attached the previous day operational report for CPP.',
     template: 'index',
     context: {
       REPORT_TITLE: file,
